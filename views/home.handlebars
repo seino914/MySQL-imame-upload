@@ -1,0 +1,15 @@
+{{! <h1>hello node.js</h1> }}
+
+<form action="/" method="post" enctype="multipart/form-data">
+  <h3>画像をアップロードする</h3>
+  <input type="file" name="imageFile" accept="image/*" />
+  <input type="submit" />
+</form>
+
+<div>
+  {{#each rows}}
+    <p>↓に保存された画像が出力される</p>
+    <img src={{this.imageName}} alt="" />
+    <p>{{this.imageName}}</p>
+  {{/each}}
+</div>
